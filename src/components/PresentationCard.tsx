@@ -55,7 +55,7 @@ export function PresentationCard({ presentation, onOpen, onRename, onDelete }: P
             <DropdownMenuItem onClick={onRename}>
               <Pencil className="size-4" /> Rename
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={onDelete} variant="destructive">
+            <DropdownMenuItem onClick={onDelete} className="text-destructive focus:text-destructive">
               <Trash2 className="size-4" /> Delete
             </DropdownMenuItem>
           </DropdownMenuContent>
