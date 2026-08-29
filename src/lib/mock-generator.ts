@@ -110,7 +110,7 @@ export function generateMockSlides(prompt: string, settings: PresentationSetting
   const title = titleFromPrompt(prompt);
   const slides: Slide[] = [buildTitleSlide(title, settings, 0)];
   for (let i = 1; i < count; i++) {
-    const sectionTitle = SECTION_TITLES[(i - 1) % SECTION_TITLES.length];
+    const sectionTitle = SECTION_TITLES[(i - 1) % SECTION_TITLES.length] ?? "Section";
     slides.push(buildContentSlide(sectionTitle, i, i % 3 === 1));
   }
   return slides;
