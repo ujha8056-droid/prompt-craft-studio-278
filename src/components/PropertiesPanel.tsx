@@ -52,7 +52,7 @@ export function PropertiesPanel({ element, onChange, onDelete, onAddElement }: P
                   step={1}
                   value={[element.style.fontSize ?? 18]}
                   onValueChange={([v]) =>
-                    onChange({ ...element, style: { ...element.style, fontSize: v } })
+                    onChange({ ...element, style: { ...element.style, fontSize: v ?? 18 } })
                   }
                 />
               </div>
